@@ -264,7 +264,13 @@ endif -%}
                   style="--mb-img-w:{{ img_w }}px;--mb-img-h:{{ img_h }}px;--mb-img-radius:{{ img_radius }}px;">
                   <ul class="mb-menu-img-grid">
                     {%- for link in menu_links -%}
-                      {%- assign menu_img = link.object.metafields.custom.menu_img.value -%}
+                      {%- assign _url_parts = link.url | split: '/collections/' -%}
+                      {%- if _url_parts.size > 1 -%}
+                        {%- assign _col_handle = _url_parts.last | split: '?' | first | split: '/' | first -%}
+                        {%- assign menu_img = collections[_col_handle].metafields.custom.menu_img.value -%}
+                      {%- else -%}
+                        {%- assign menu_img = nil -%}
+                      {%- endif -%}
                       {%- if menu_img != blank -%}
                         <li class="mb-menu-img-item">
                           <a href="{{ link.url }}">
