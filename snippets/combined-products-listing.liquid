@@ -1,35 +1,47 @@
 {%- liquid
-    assign custom_fields = product.metafields.custom.combined_products_listing
-    if custom_fields == blank
-        assign custom_fields = product.metafields.custom.colors_list
+  assign has_colors = false
+  for i in (1..6)
+    assign colorKey = 'product_color_' | append: i
+    assign colorHandle = product.metafields.my_fields[colorKey]
+    if colorHandle != blank
+      assign has_colors = true
+      break
     endif
-    assign color_label = product.metafields.custom.combined_products_listing_name_color
+  endfor
 -%}
-{%- if custom_fields != blank -%}
-<div class="swatch-custom">
-    <p class="form__label-combined">Color<span>{{ color_label }}</span></p>
-    <ul class="list-unstyled d-flex flex-align-center flex-wrap">
-        {%- for referenced_product in custom_fields.value -%}
-            {%- liquid
-                assign image_custom = referenced_product.metafields.custom.combined_products_listing_image.value
-            -%}
-            <li class="item-custom{% if referenced_product.id == product.id %} current-item{% endif %}">
-                <div class="item-custom--image">
-                    <{% if referenced_product.id == product.id %}span{% else %}a href="{{ shop.url | append: '/products/' | append: referenced_product.handle }}"{% endif %}
-                        class="item-custom--inner"
-                        style="
-                            {%- if image_custom != blank -%}
-                                background: url({{ image_custom | img_url: 'medium' }});
-                            {%- else -%}
-                                background: url({{ referenced_product.featured_image | img_url: 'medium' }});
-                            {%- endif -%}
-                            background-size: cover;"
-                        title="{{ referenced_product.title }}"
-                    >
-                    </{% if referenced_product.id == product.id %}span{% else %}a{% endif %}>
-                </div>
-            </li>
-        {%- endfor -%}
+{%- if has_colors -%}
+  {%- assign this_color = product.metafields.uak.this_product_color.value -%}
+  <div class="productView-moreItem fl">
+    <legend class="form__label" style="width:100%">Color</legend>
+    <ul class="color_image">
+      <li class="inner_color_image" id="active-link">
+        {{ product.featured_image | img_url: '200x200' | img_tag: product.featured_image.alt }}
+        <span>{{ this_color }}</span>
+      </li>
+      {%- for i in (1..6) -%}
+        {%- liquid
+          assign colorKey = 'product_color_' | append: i
+          assign colorHandle = product.metafields.my_fields[colorKey]
+          assign productVal = all_products[colorHandle]
+          assign otherColor = productVal.metafields.uak.this_product_color.value
+        -%}
+        {%- if productVal != blank -%}
+          <li class="inner_color_image">
+            <a href="{{ productVal.url }}">{{ productVal.featured_image | img_url: '200x200' | img_tag: productVal.featured_image.alt }}</a>
+            <span>{{ otherColor }}</span>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
     </ul>
-</div>
+  </div>
+  <style>
+    ul.color_image { display: flex; list-style: none; padding: 0; flex-wrap: wrap; justify-content: flex-start; margin-bottom: 0; }
+    ul.color_image > li { display: grid; margin: 0 4px; min-height: 105px; }
+    li.inner_color_image img { border-radius: 5px; }
+    .inner_color_image > span { display: none; }
+    .inner_color_image:hover span { display: block !important; }
+    li.inner_color_image > span { font-size: 12px; position: relative; color: #6e6e6e; font-weight: 500; text-align: center; top: -3px; }
+    ul.color_image li img { max-width: 80px; border: 2px solid #dedede; }
+    #active-link img { border: 2px solid #000; }
+  </style>
 {%- endif -%}
