@@ -18,7 +18,7 @@
 
 /* ATC button → outline style (white bg, black border) */
 .t4s-product-form__variants .t4s-product-form__submit[name="add"] {
-  background: #fff !important;
+  background: transparent !important;
   background-image: none !important;
   border: 2px solid #111 !important;
   color: #111 !important;
