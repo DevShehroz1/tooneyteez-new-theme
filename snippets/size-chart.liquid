@@ -1,0 +1,25 @@
+{%- comment -%}
+  Size Chart Snippet
+  Usage: {% render 'size-chart', sc_type: sc_type, page_size: page_size, image: image, ck_s: ck_s %}
+{%- endcomment -%}
+
+{%- if ck_s -%}
+  {%- if sc_type == '1' and page_size != blank -%}
+    <a class="t4s-ch t4s-btn__size-chart size-chart-link" data-no-instant rel="nofollow" href="{{ page_size.url }}" data-class="t4s-mfp-btn-close-inline" data-id="t4s-pr-popup__size-guide" data-storageid="{{ page_size.url }}" data-open-mfp-ajax data-style="max-width:950px" data-mfp-src="{{ page_size.url }}/?section_id=ajax_popup">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 2V14H14V2H2ZM1 0H15C15.5523 0 16 0.447715 16 1V15C16 15.5523 15.5523 16 15 16H1C0.447715 16 0 15.5523 0 15V1C0 0.447715 0.447715 0 1 0Z" fill="currentColor"/>
+        <path d="M4 4H12V5H4V4ZM4 7H12V8H4V7ZM4 10H12V11H4V10Z" fill="currentColor"/>
+      </svg>
+      <span>{{ 'products.product.product_size_guide' | t | default: 'Size Chart' }}</span>
+    </a>
+  {%- elsif sc_type == '2' and image != blank -%}
+    <a class="t4s-ch t4s-btn__size-chart size-chart-link" data-no-instant rel="nofollow" href="{{ product.url }}" data-t4s-image-opend data-pswp-src="{{ image | image_url }}" data-pswp-w="{{ image.width }}" data-pswp-h="{{ image.height }}" data-pswp-class="pswp__size-guide">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M2 2V14H14V2H2ZM1 0H15C15.5523 0 16 0.447715 16 1V15C16 15.5523 15.5523 16 15 16H1C0.447715 16 0 15.5523 0 15V1C0 0.447715 0.447715 0 1 0Z" fill="currentColor"/>
+        <path d="M4 4H12V5H4V4ZM4 7H12V8H4V7ZM4 10H12V11H4V10Z" fill="currentColor"/>
+      </svg>
+      <span>{{ 'products.product.product_size_guide' | t | default: 'Size Chart' }}</span>
+    </a>
+  {%- endif -%}
+{%- endif -%}
+
