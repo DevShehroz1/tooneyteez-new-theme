@@ -505,6 +505,7 @@ endif -%}
                   </div>
 
                 {%- when 'form' -%}
+                  {%- render 'combined-products-listing', product: product -%}
                   {%- liquid
                     assign product_list = bk_stts.product_list
                     assign advance_pr_type = bk_stts.advance_pr_list
