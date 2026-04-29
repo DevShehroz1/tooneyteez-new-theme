@@ -16,21 +16,30 @@
 
 /* ── PDP CRO Improvements ────────────────────────────────────────── */
 
-/* ATC button → outline style (white bg, black border) */
-.t4s-product-form__variants .t4s-product-form__submit[name="add"] {
+/* ATC button → transparent outline */
+.t4s-product-form__submit[name="add"],
+button[name="add"],
+.t4s-btn-atc {
   background: transparent !important;
+  background-color: transparent !important;
   background-image: none !important;
   border: 2px solid #111 !important;
   color: #111 !important;
   font-weight: 700;
   letter-spacing: 0.08em;
   transition: background 0.2s ease, color 0.2s ease;
+  box-shadow: none !important;
 }
-.t4s-product-form__variants .t4s-product-form__submit[name="add"]:hover {
+.t4s-product-form__submit[name="add"]:hover,
+button[name="add"]:hover,
+.t4s-btn-atc:hover {
   background: #111 !important;
+  background-color: #111 !important;
   color: #fff !important;
 }
-.t4s-product-form__variants .t4s-product-form__submit[name="add"] svg {
+.t4s-product-form__submit[name="add"] svg,
+button[name="add"] svg,
+.t4s-btn-atc svg {
   stroke: currentColor;
 }
 
