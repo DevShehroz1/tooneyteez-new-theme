@@ -1383,7 +1383,7 @@
           "mb_nav-0": {
             "type": "menu",
             "settings": {
-              "title": "Home",
+              "title": "HOME",
               "url": "https://factoryx.pk/",
               "open_link": "_self",
               "menu": "",
@@ -1409,7 +1409,7 @@
           "25fa7ecf-2db0-4747-b093-a1299099917e": {
             "type": "menu",
             "settings": {
-              "title": "Women",
+              "title": "WOMEN",
               "url": "shopify://collections/womens",
               "open_link": "_self",
               "menu": "women",
@@ -1422,8 +1422,8 @@
           "58800ed8-befe-449a-b8f8-ea86620bef6f": {
             "type": "menu",
             "settings": {
-              "title": "Kids",
-              "url": "",
+              "title": "KIDS",
+              "url": "https://tooneykids.com/",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -1434,10 +1434,9 @@
           },
           "mb_nav-3": {
             "type": "menu",
-            "disabled": true,
             "settings": {
-              "title": "Winter",
-              "url": "shopify://blogs/fashion",
+              "title": "TINY STUDIO ESSENTIALS",
+              "url": "shopify://collections/tny-studio-essentials",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -1449,11 +1448,24 @@
           "menu_MkLhEB": {
             "type": "menu",
             "settings": {
-              "title": "Clearance",
-              "url": "shopify://collections/sale",
+              "title": "24/7 COMFORT WEAR",
+              "url": "shopify://collections/24-7-collection",
               "open_link": "_self",
               "menu": "",
-              "lb": "Sale",
+              "lb": "",
+              "lb_cl": "#ec0101",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_kyEQ6n": {
+            "type": "menu",
+            "settings": {
+              "title": "UNISEX",
+              "url": "shopify://collections/unisex-collection",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
               "lb_cl": "#ec0101",
               "icons_op": "2",
               "icon": ""
@@ -1475,6 +1487,7 @@
           "58800ed8-befe-449a-b8f8-ea86620bef6f",
           "mb_nav-3",
           "menu_MkLhEB",
+          "menu_kyEQ6n",
           "mb_nav-7"
         ],
         "settings": {}
