@@ -254,6 +254,40 @@ endif -%}
                     {{ block_stts.title }}{% if block_stts.lb != blank %}<span class="t4s-lb_nav_mb" style="background-color: {{ block_stts.lb_cl | default: '#01bad4' }}">{{ block_stts.lb }}</span>{% endif %}</a></li>
                {%- endif -%}
 
+            {%- when 'menu_img' -%}
+              {%- assign img_w = block_stts.img_width | default: 150 -%}
+              {%- assign img_h = block_stts.img_height | default: 150 -%}
+              {%- assign img_radius = block_stts.img_radius | default: 10 -%}
+              {%- assign menu_links = linklists[block_stts.menu].links -%}
+              {%- if menu_links.size > 0 -%}
+                <li class="t4s-menu-item mb-menu-img-block" {{ block.shopify_attributes }}
+                  style="--mb-img-w:{{ img_w }}px;--mb-img-h:{{ img_h }}px;--mb-img-radius:{{ img_radius }}px;">
+                  <ul class="mb-menu-img-grid">
+                    {%- for link in menu_links -%}
+                      {%- assign menu_img = link.object.metafields.custom.menu_img.value -%}
+                      {%- if menu_img != blank -%}
+                        <li class="mb-menu-img-item">
+                          <a href="{{ link.url }}">
+                            <div class="mb-menu-img-wrapper">
+                              <img src="{{ menu_img | image_url: width: img_w, height: img_h, crop: 'center' }}"
+                                   alt="{{ link.title | escape }}"
+                                   loading="lazy"
+                                   width="{{ img_w }}"
+                                   height="{{ img_h }}">
+                            </div>
+                            <span class="mb-menu-img-label">{{ link.title }}</span>
+                          </a>
+                        </li>
+                      {%- else -%}
+                        <li class="mb-menu-text-item">
+                          <a href="{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                </li>
+              {%- endif -%}
+
             {%- when 'catpr' -%}
             
                {%- capture get_sub_cat -%}
@@ -410,6 +444,52 @@ endif -%}
                 "default":"las la-chair",
                 "info":"[Line awesome icons](https://kalles.the4.co/font-lineawesome/)"
             }
+        ]
+      },
+      {
+        "type": "menu_img",
+        "name": "Menu with Images",
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Links with a 'custom.menu_img' metafield show as image+text in a 2-column grid. Links without show as text only."
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "Menu",
+            "default": "main-menu"
+          },
+          {
+            "type": "range",
+            "id": "img_width",
+            "label": "Image width",
+            "min": 60,
+            "max": 300,
+            "step": 10,
+            "unit": "px",
+            "default": 150
+          },
+          {
+            "type": "range",
+            "id": "img_height",
+            "label": "Image height",
+            "min": 60,
+            "max": 300,
+            "step": 10,
+            "unit": "px",
+            "default": 150
+          },
+          {
+            "type": "range",
+            "id": "img_radius",
+            "label": "Image border radius",
+            "min": 0,
+            "max": 50,
+            "step": 2,
+            "unit": "px",
+            "default": 10
+          }
         ]
       },
       {
