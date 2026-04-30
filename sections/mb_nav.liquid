@@ -204,7 +204,33 @@ endif -%}
                                </i>
                         {% endif -%}
                         {{ block_stts.title }}{% if block_stts.lb != blank %}<span class="t4s-lb_nav_mb" style="background-color: {{ block_stts.lb_cl | default: '#01bad4' }}">{{ block_stts.lb }}</span>{% endif %}</span><span class="t4s-mb-nav__icon"></span></a>
+                     {%- capture _mb_img_links -%}
+                       {%- for link in linklists[block_stts.menu].links -%}
+                         {%- if link.links != blank -%}{%- continue -%}{%- endif -%}
+                         {%- assign _mbp = link.url | split: '/collections/' -%}
+                         {%- if _mbp.size > 1 -%}
+                           {%- assign _mbh = _mbp.last | split: '?' | first | split: '/' | first -%}
+                           {%- assign _mbci = collections[_mbh].metafields.custom.menu_img.value -%}
+                         {%- else -%}
+                           {%- assign _mbci = nil -%}
+                         {%- endif -%}
+                         {%- if _mbci != blank -%}
+                           <li class="mb-menu-img-item">
+                             <a href="{{ link.url }}">
+                               <div class="mb-menu-img-wrapper">
+                                 <img src="{{ _mbci | image_url: width: 150, height: 150, crop: 'center' }}"
+                                      alt="{{ link.title | escape }}" loading="lazy" width="150" height="150">
+                               </div>
+                               <span class="mb-menu-img-label">{{ link.title }}</span>
+                             </a>
+                           </li>
+                         {%- endif -%}
+                       {%- endfor -%}
+                     {%- endcapture -%}
                      <ul class="t4s-sub-menu">
+                        {%- if _mb_img_links != blank -%}
+                          <li class="mb-menu-img-inline"><ul class="mb-menu-img-grid">{{ _mb_img_links }}</ul></li>
+                        {%- endif -%}
                         {%- for link in linklists[block_stts.menu].links -%}
 
                            {%- assign arrlt = link.title | split: '[' -%}
@@ -235,7 +261,16 @@ endif -%}
                                  </ul>
                               </li>
                            {%- else -%}
-                              <li class="t4s-menu-item t4s-item-level-1{% if link.active %} is--current{% endif %}"><a href="{{ link.url }}">{%- render 'lb_inc_mb', arrlt: arrlt -%}</a></li>
+                              {%- assign _mbp2 = link.url | split: '/collections/' -%}
+                              {%- if _mbp2.size > 1 -%}
+                                {%- assign _mbh2 = _mbp2.last | split: '?' | first | split: '/' | first -%}
+                                {%- assign _mbci2 = collections[_mbh2].metafields.custom.menu_img.value -%}
+                              {%- else -%}
+                                {%- assign _mbci2 = nil -%}
+                              {%- endif -%}
+                              {%- if _mbci2 == blank -%}
+                                <li class="t4s-menu-item t4s-item-level-1{% if link.active %} is--current{% endif %}"><a href="{{ link.url }}">{%- render 'lb_inc_mb', arrlt: arrlt -%}</a></li>
+                              {%- endif -%}
                            {%- endif -%}
 
                         {%- endfor -%}

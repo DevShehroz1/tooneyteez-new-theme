@@ -90,7 +90,8 @@
 }
 
 /* Mobile Menu Image Grid */
-.mb-menu-img-block { padding: 0 !important; border-bottom: none !important; }
+.mb-menu-img-block,
+.mb-menu-img-inline { padding: 0 !important; border-bottom: none !important; list-style: none !important; }
 .mb-menu-img-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
