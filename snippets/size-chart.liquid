@@ -1,7 +1,24 @@
 {%- comment -%}
   Size Chart Snippet
   Usage: {% render 'size-chart', sc_type: sc_type, page_size: page_size, image: image, ck_s: ck_s %}
+
+  Per-product metafield overrides (namespace: theme):
+    theme.size_chart_image  → file/image reference  → opens as lightbox (overrides block image)
+    theme.size_chart_page   → page reference         → opens as popup  (overrides block page)
 {%- endcomment -%}
+
+{%- liquid
+  assign meta_sc_image = product.metafields.theme.size_chart_image.value
+  assign meta_sc_page  = product.metafields.theme.size_chart_page.value
+
+  if meta_sc_image != blank
+    assign sc_type   = '2'
+    assign image     = meta_sc_image
+  elsif meta_sc_page != blank
+    assign sc_type   = '1'
+    assign page_size = meta_sc_page
+  endif
+-%}
 
 <style>
   .t4s-btn__size-chart {
