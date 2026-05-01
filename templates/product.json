@@ -89,7 +89,7 @@
             "show_qty": true,
             "enable_wishlist": false,
             "enable_compare": false,
-            "btn_atc_full": false,
+            "btn_atc_full": true,
             "pr_btn_round": 10,
             "ani": "t4s-ani-shake",
             "time": 6,
