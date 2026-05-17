@@ -665,21 +665,17 @@
               "lb_cl": "#ec0101"
             }
           },
-          "drop_aq3Daq": {
-            "type": "drop",
+          "base_VFKrAh": {
+            "type": "base",
             "settings": {
-              "title": "Unisex",
-              "url": "https://tooneykids.com/",
+              "title": "TNY Studio Essentials",
+              "url": "/",
               "open_link": "_self",
-              "menu": "",
               "icon": "",
               "cus_cl": false,
               "cl": "#ec0101",
               "lb": "",
-              "lb_cl": "",
-              "lazy_mn": true,
-              "pos_sub": "bottom",
-              "pos": "left"
+              "lb_cl": ""
             }
           },
           "base_UVqcTt": {
@@ -695,17 +691,22 @@
               "lb_cl": ""
             }
           },
-          "base_VFKrAh": {
-            "type": "base",
+          "drop_aq3Daq": {
+            "type": "drop",
+            "disabled": true,
             "settings": {
-              "title": "TNY Studio Essentials",
-              "url": "/",
+              "title": "Unisex",
+              "url": "https://tooneykids.com/",
               "open_link": "_self",
+              "menu": "",
               "icon": "",
               "cus_cl": false,
               "cl": "#ec0101",
               "lb": "",
-              "lb_cl": ""
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos_sub": "bottom",
+              "pos": "left"
             }
           }
         },
@@ -713,9 +714,9 @@
           "drop_kN77xX",
           "drop_jRCPdC",
           "base_znmDgY",
-          "drop_aq3Daq",
+          "base_VFKrAh",
           "base_UVqcTt",
-          "base_VFKrAh"
+          "drop_aq3Daq"
         ],
         "settings": {
           "layout": "logo_left",
@@ -1384,7 +1385,7 @@
             "type": "menu",
             "settings": {
               "title": "HOME",
-              "url": "https://factoryx.pk/",
+              "url": "/",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -1399,7 +1400,7 @@
               "title": "MEN",
               "url": "shopify://collections/men",
               "open_link": "_self",
-              "menu": "mens",
+              "menu": "men",
               "lb": "",
               "lb_cl": "",
               "icons_op": "2",
@@ -1412,7 +1413,7 @@
               "title": "WOMEN",
               "url": "shopify://collections/womens",
               "open_link": "_self",
-              "menu": "women",
+              "menu": "women-1",
               "lb": "",
               "lb_cl": "",
               "icons_op": "2",
@@ -1460,6 +1461,7 @@
           },
           "menu_kyEQ6n": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "UNISEX",
               "url": "shopify://collections/unisex-collection",
