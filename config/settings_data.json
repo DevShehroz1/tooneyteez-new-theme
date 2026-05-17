@@ -656,7 +656,7 @@
             "type": "base",
             "settings": {
               "title": "Kids",
-              "url": "shopify://collections/sale",
+              "url": "https://tooneykids.com",
               "open_link": "_self",
               "icon": "",
               "cus_cl": true,
