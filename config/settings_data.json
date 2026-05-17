@@ -624,7 +624,7 @@
               "title": "Men",
               "url": "",
               "open_link": "_self",
-              "menu": "mens",
+              "menu": "men",
               "icon": "",
               "cus_cl": false,
               "cl": "#ec0101",
@@ -641,7 +641,7 @@
               "title": "Women",
               "url": "shopify://collections/womens",
               "open_link": "_self",
-              "menu": "collection-women",
+              "menu": "women-1",
               "icon": "",
               "cus_cl": false,
               "cl": "#ec0101",
@@ -652,11 +652,24 @@
               "pos": "left"
             }
           },
+          "base_znmDgY": {
+            "type": "base",
+            "settings": {
+              "title": "Kids",
+              "url": "shopify://collections/sale",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": true,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#ec0101"
+            }
+          },
           "drop_aq3Daq": {
             "type": "drop",
             "settings": {
               "title": "Unisex",
-              "url": "shopify://collections/women",
+              "url": "https://tooneykids.com/",
               "open_link": "_self",
               "menu": "",
               "icon": "",
@@ -694,28 +707,15 @@
               "lb": "",
               "lb_cl": ""
             }
-          },
-          "base_znmDgY": {
-            "type": "base",
-            "settings": {
-              "title": "Kids",
-              "url": "shopify://collections/sale",
-              "open_link": "_self",
-              "icon": "",
-              "cus_cl": true,
-              "cl": "#ec0101",
-              "lb": "",
-              "lb_cl": "#ec0101"
-            }
           }
         },
         "block_order": [
           "drop_kN77xX",
           "drop_jRCPdC",
+          "base_znmDgY",
           "drop_aq3Daq",
           "base_UVqcTt",
-          "base_VFKrAh",
-          "base_znmDgY"
+          "base_VFKrAh"
         ],
         "settings": {
           "layout": "logo_left",
