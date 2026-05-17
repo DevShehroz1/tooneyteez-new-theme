@@ -273,7 +273,7 @@
         "head_btn_cl": "dark",
         "head_btn_effect": "default",
         "head_btn_hidden_mb": true,
-        "collection": "men-winters-new-arrival",
+        "collection": "bogo",
         "product_des": "1",
         "show_vendor": false,
         "use_cdt": false,
@@ -335,7 +335,7 @@
         "collection_item_GmFbbc": {
           "type": "collection_item",
           "settings": {
-            "collection": "women",
+            "collection": "men",
             "image": "shopify://shop_images/1_1066x_eb5b307e-2bf1-41b3-b3ba-6f1a13a17c60.svg",
             "icon": "las la-gem",
             "collection_title": "",
@@ -345,7 +345,7 @@
         "collection_item_cQTBtT": {
           "type": "collection_item",
           "settings": {
-            "collection": "kids-copy",
+            "collection": "womens",
             "image": "shopify://shop_images/2_1066x_811186d6-0e8a-4221-8dd9-5de925ff34e5.svg",
             "icon": "las la-gem",
             "collection_title": "",
@@ -355,11 +355,11 @@
         "collection_item_WgKRya": {
           "type": "collection_item",
           "settings": {
-            "collection": "sale",
+            "collection": "",
             "image": "shopify://shop_images/3_1066x_14524711-b970-462f-9365-c96452c76b22.svg",
             "icon": "las la-gem",
             "collection_title": "",
-            "collection_link": ""
+            "collection_link": "https://tooneykids.com"
           }
         }
       },
@@ -460,7 +460,7 @@
         "head_btn_cl": "dark",
         "head_btn_effect": "default",
         "head_btn_hidden_mb": true,
-        "collection": "unisex-collection",
+        "collection": "featured-collection-tees",
         "product_des": "1",
         "show_vendor": false,
         "use_cdt": false,
