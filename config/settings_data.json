@@ -2539,6 +2539,115 @@
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
+      },
+      "15557474716127144420": {
+        "type": "shopify://apps/kaching-bundles/blocks/app-embed-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+        "disabled": false,
+        "settings": {}
+      },
+      "8778269090131883189": {
+        "type": "shopify://apps/kaching-bundles/blocks/app-embed-block-v2/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+        "disabled": false,
+        "settings": {}
+      },
+      "11502817661673146621": {
+        "type": "shopify://apps/releasit-cod-fee-partial-pay/blocks/app-embed/019a066b-bc34-792e-8460-8aae1d0bdf53",
+        "disabled": false,
+        "settings": {}
+      },
+      "7292877812810369780": {
+        "type": "shopify://apps/fordeer-preorder-now-presale/blocks/preOrder-embed/fc52eb6a-d4c7-47e1-9c4c-db0485af36b4",
+        "disabled": false,
+        "settings": {}
+      },
+      "14564856711330486186": {
+        "type": "shopify://apps/kip-payment-methods/blocks/kip-theme-extension/d53576f1-e23f-4883-bd03-d5c412a8e7ce",
+        "disabled": false,
+        "settings": {}
+      },
+      "13768625480086291342": {
+        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "7555218208816688692": {
+        "type": "shopify://apps/tydal-popups-email-pop-ups/blocks/app-embed/48a5a3ef-b6ff-431f-842f-6f17862c4a63",
+        "disabled": false,
+        "settings": {}
+      },
+      "8669066016853369741": {
+        "type": "shopify://apps/hotjar-install/blocks/global/2903e4ea-7615-463e-8b60-582f487dac4f",
+        "disabled": false,
+        "settings": {}
+      },
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#000000",
+          "secondary_color": "#FFFFFF",
+          "ternary_color": "#6A6A6A",
+          "button_icon": "chat_bubble",
+          "button_text": "chat_with_us",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": ""
+        }
+      },
+      "3163313838087404448": {
+        "type": "shopify://apps/whapi/blocks/chat-button/019b9d67-aa4a-70ea-b435-33b0e7a0a0c2",
+        "disabled": true,
+        "settings": {
+          "phone_number": "",
+          "pre_message": "",
+          "position": "bottom-right",
+          "button_size": 60,
+          "margin": 20,
+          "border_radius": 50,
+          "button_color": "#25D366",
+          "icon_color": "#FFFFFF",
+          "show_label": false,
+          "label_text": "Chat with us"
+        }
+      },
+      "13764312152574845954": {
+        "type": "shopify://apps/whapi/blocks/newsletter-popup/019b9d67-aa4a-70ea-b435-33b0e7a0a0c2",
+        "disabled": true,
+        "settings": {
+          "title": "Join our WhatsApp Newsletter!",
+          "description": "Get exclusive deals and updates directly on WhatsApp.",
+          "placeholder": "Enter your phone number",
+          "button_text": "Subscribe",
+          "success_message": "🎉 You're subscribed successfully!",
+          "privacy_text": "We respect your privacy. Unsubscribe anytime.",
+          "delay": 5,
+          "show_once": true,
+          "primary_color": "#25D366",
+          "primary_text_color": "#FFFFFF",
+          "background_color": "#FFFFFF",
+          "text_color": "#1A1A1A",
+          "font_family": "inherit",
+          "title_size": 24,
+          "description_size": 16,
+          "border_radius": 8,
+          "default_country": "+1"
+        }
+      },
+      "6159598353363395418": {
+        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
+        "disabled": false,
+        "settings": {
+          "widget_position": "LEFT_BOTTOM",
+          "side_margin": 36,
+          "bottom_margin": 36,
+          "mobile_side_margin": 16,
+          "mobile_bottom_margin": 46
+        }
       }
     }
   }
