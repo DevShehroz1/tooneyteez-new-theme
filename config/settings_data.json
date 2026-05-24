@@ -2575,11 +2575,6 @@
         "disabled": false,
         "settings": {}
       },
-      "7555218208816688692": {
-        "type": "shopify://apps/tydal-popups-email-pop-ups/blocks/app-embed/48a5a3ef-b6ff-431f-842f-6f17862c4a63",
-        "disabled": false,
-        "settings": {}
-      },
       "8669066016853369741": {
         "type": "shopify://apps/hotjar-install/blocks/global/2903e4ea-7615-463e-8b60-582f487dac4f",
         "disabled": false,
@@ -2648,6 +2643,11 @@
           "mobile_side_margin": 16,
           "mobile_bottom_margin": 46
         }
+      },
+      "7555218208816688692": {
+        "type": "shopify://apps/tydal-popups-email-pop-ups/blocks/app-embed/48a5a3ef-b6ff-431f-842f-6f17862c4a63",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
