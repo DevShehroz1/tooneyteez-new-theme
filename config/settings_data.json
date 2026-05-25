@@ -481,7 +481,7 @@
             "type": "announcement",
             "settings": {
               "link": "",
-              "content": "<p>FREE SHIPPING ON ALL PREPAID ORDERS</p>",
+              "content": "<p>For fast, hassle-free delivery, pay online via card or bank deposit. </p>",
               "adding_border": true,
               "countdown": "2023/12/26",
               "txt_day": "days",
@@ -492,7 +492,7 @@
             "type": "announcement",
             "settings": {
               "link": "",
-              "content": "<p><strong>NOW LIVE AT LANES ( MALL ONE, LAHORE ) </strong></p>",
+              "content": "<p>⚡ FREE SHIPPING ON ORDERS ABOVE RS.3000 <a href=\"/collections/all\">⚡️ </a></p>",
               "adding_border": false,
               "countdown": "2023/12/26",
               "txt_day": "days",
@@ -501,6 +501,7 @@
           },
           "announcement_phWKed": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "",
               "content": "<p>Use code <strong>PREPAID10</strong> for <strong>10% off</strong>.</p>",
