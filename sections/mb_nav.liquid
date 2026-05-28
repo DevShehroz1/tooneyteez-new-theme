@@ -20,6 +20,36 @@ endif -%}
          {%- case block.type -%}
             {%- when 'help' -%}
                <li id="item_mb_help" class="t4s-menu-item t4s-item-level-0 t4s-menu-item-infos"><p class="t4s-menu_infos_title">{{ block_stts.title }}</p><div class="t4s-menu_infos_text t4s-rte--list">{{ block_stts.text }}</div></li>
+
+            {%- when 'footer_block' -%}
+               {%- assign _fb_titles = 'col1_title,col2_title,col3_title' | split: ',' -%}
+               {%- assign _fb_links  = 'col1_links,col2_links,col3_links'   | split: ',' -%}
+               <li id="item_mb_footer_{{ block.id }}" class="t4s-menu-item t4s-item-level-0 t4s-mb-footer-block" {{ block.shopify_attributes }}>
+                 <div class="t4s-mb-footer-cols">
+                   {%- for i in (0..2) -%}
+                     {%- assign t_key = _fb_titles[i] -%}
+                     {%- assign l_key = _fb_links[i] -%}
+                     {%- assign col_title = block_stts[t_key] -%}
+                     {%- assign col_raw   = block_stts[l_key] | default: '' -%}
+                     {%- if col_title == blank and col_raw == blank -%}{%- continue -%}{%- endif -%}
+                     <div class="t4s-mb-footer-col">
+                       {%- if col_title != blank -%}<p class="t4s-mb-footer-col__title">{{ col_title }}</p>{%- endif -%}
+                       {%- if col_raw != blank -%}
+                         <ul>
+                           {%- assign _fb_lines = col_raw | newline_to_br | split: '<br />' -%}
+                           {%- for _fb_ln in _fb_lines -%}
+                             {%- assign _fb_ln_t = _fb_ln | strip -%}
+                             {%- if _fb_ln_t == blank -%}{%- continue -%}{%- endif -%}
+                             {%- assign _fb_parts = _fb_ln_t | split: '|' -%}
+                             {%- if _fb_parts.size < 2 -%}{%- continue -%}{%- endif -%}
+                             <li><a href="{{ _fb_parts[1] | strip }}">{{ _fb_parts[0] | strip }}</a></li>
+                           {%- endfor -%}
+                         </ul>
+                       {%- endif -%}
+                     </div>
+                   {%- endfor -%}
+                 </div>
+               </li>
             
             {%- when 'cur' -%}
 
@@ -192,8 +222,17 @@ endif -%}
             
             {%- when 'menu' -%}
                {%- assign _mb_static_raw = block_stts.static_links | default: '' -%}
+               {%- assign _mb_extra_cls = '' -%}
+               {%- assign _mb_sub_style = '' -%}
+               {%- if block_stts.default_open -%}
+                  {%- assign _mb_extra_cls = _mb_extra_cls | append: ' is--opend' -%}
+                  {%- assign _mb_sub_style = ' style="display:block"' -%}
+               {%- endif -%}
+               {%- if block_stts.highlight -%}
+                  {%- assign _mb_extra_cls = _mb_extra_cls | append: ' t4s-mb-highlight' -%}
+               {%- endif -%}
                {%- if _mb_static_raw != blank -%}
-                  <li id="item_{{ block.id }}" class="t4s-menu-item t4s-item-level-0 t4s-menu-item-has-children {{ only_icon }}" {{ block.shopify_attributes }}>
+                  <li id="item_{{ block.id }}" class="t4s-menu-item t4s-item-level-0 t4s-menu-item-has-children {{ only_icon }}{{ _mb_extra_cls }}" {{ block.shopify_attributes }}>
                      <a href="{{ block_stts.url }}" target="{{ block_stts.open_link }}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">
                         {%- if block_stts.icons_op == '2' and block_stts.icon != blank %}<i class="{{ block_stts.icon | strip }}"></i>
                            {%- elsif block_stts.icons_op == '1' and block_stts.image != blank %}
@@ -204,7 +243,7 @@ endif -%}
                                </i>
                         {% endif -%}
                         {{ block_stts.title }}{% if block_stts.lb != blank %}<span class="t4s-lb_nav_mb" style="background-color: {{ block_stts.lb_cl | default: '#01bad4' }}">{{ block_stts.lb }}</span>{% endif %}</span><span class="t4s-mb-nav__icon"></span></a>
-                     <ul class="t4s-sub-menu">
+                     <ul class="t4s-sub-menu"{{ _mb_sub_style }}>
                         {%- assign _mb_static_lines = _mb_static_raw | newline_to_br | split: '<br />' -%}
                         {%- assign _mb_in_group = false -%}
                         {%- for _mb_ln in _mb_static_lines -%}
@@ -490,7 +529,19 @@ endif -%}
                 "type": "textarea",
                 "id": "static_links",
                 "label": "Static links (overrides 'Add menu')",
-                "info": "One per line, format: Label|URL"
+                "info": "One per line, format: Label|URL. Prefix a line with '>' to make it a sub-accordion header."
+            },
+            {
+                "type": "checkbox",
+                "id": "default_open",
+                "label": "Expand by default",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "highlight",
+                "label": "Highlight this row (yellow)",
+                "default": false
             },
             {
                 "type":"text",
@@ -684,6 +735,23 @@ endif -%}
             "label": "Content",
             "default": "<i class=\"pegk pe-7s-call fwb mr__10\"><\/i>+01 23456789<br><i class=\"pegk pe-7s-mail fwb mr__10\"><\/i><a class=\"cg\" href=\"mailto:kalles@domain.com\">kalles@domain.com<\/a>"
          }
+        ]
+      },
+      {
+        "type": "footer_block",
+        "name": "Footer links (3 columns)",
+        "limit": 1,
+        "settings": [
+          { "type": "paragraph", "content": "Each column: heading + a textarea of Label|URL lines (one per line)." },
+          { "type": "header",  "content": "Column 1" },
+          { "type": "text",    "id": "col1_title", "label": "Heading", "default": "Shop" },
+          { "type": "textarea","id": "col1_links", "label": "Links",   "info": "One per line, format: Label|URL" },
+          { "type": "header",  "content": "Column 2" },
+          { "type": "text",    "id": "col2_title", "label": "Heading", "default": "Help" },
+          { "type": "textarea","id": "col2_links", "label": "Links",   "info": "One per line, format: Label|URL" },
+          { "type": "header",  "content": "Column 3" },
+          { "type": "text",    "id": "col3_title", "label": "Heading", "default": "About" },
+          { "type": "textarea","id": "col3_links", "label": "Links",   "info": "One per line, format: Label|URL" }
         ]
       },
       {

@@ -1268,7 +1268,9 @@
               "static_links": ">Categories|/collections/summer-26\nSummer Tees|/collections/summer-tees\nShorts|/collections/shorts\nCo-ord Sets|/collections/co-ords\nUnisex Graphics|/collections/unisex-graphic-tees\nKids Summer|/collections/kids-summer\nShop All Summer|/collections/summer-26\n>Featured / Discovery|/collections/summer-26\nNew Drop|/collections/summer-26?sort_by=created-descending\nBestsellers|/collections/summer-26?sort_by=best-selling\nUnder Rs.1500|/collections/summer-26/under-1500\nBundle & Save|/collections/bundle-deals\nTNY Athletics|/collections/tny-athletics\n24/7 Core|/collections/24-7",
               "lb": "",
               "icon": "",
-              "icons_op": "0"
+              "icons_op": "0",
+              "default_open": true,
+              "highlight": true
             }
           },
           "89e28d284258453daf": {
@@ -1323,10 +1325,15 @@
               "icons_op": "0"
             }
           },
-          "d252d2465d384889b2": {
-            "type": "help",
+          "ef44c957921d4cf183": {
+            "type": "footer_block",
             "settings": {
-              "title": "Need help?"
+              "col1_title": "Shop",
+              "col1_links": "Winter archive|/collections/winter\nAll collections|/collections\nBundle deals|/collections/bundle-deals\nGift cards|/products/gift-card",
+              "col2_title": "Help",
+              "col2_links": "Size guide|/pages/size-guide\nTrack order|/pages/track-order\nReturns & exchange|/pages/returns-exchange\nContact|/pages/contact\nFAQ|/pages/faq",
+              "col3_title": "About",
+              "col3_links": "Our story|/pages/our-story\nPrivacy policy|/pages/privacy-policy\nTerms|/pages/terms-of-service"
             }
           }
         },
@@ -1337,7 +1344,7 @@
           "76514f5a75cb4a33b7",
           "83a2ea0420264c1cb6",
           "47af481d468f4a5e8d",
-          "d252d2465d384889b2"
+          "ef44c957921d4cf183"
         ],
         "settings": {}
       },
