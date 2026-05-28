@@ -206,15 +206,33 @@ endif -%}
                         {{ block_stts.title }}{% if block_stts.lb != blank %}<span class="t4s-lb_nav_mb" style="background-color: {{ block_stts.lb_cl | default: '#01bad4' }}">{{ block_stts.lb }}</span>{% endif %}</span><span class="t4s-mb-nav__icon"></span></a>
                      <ul class="t4s-sub-menu">
                         {%- assign _mb_static_lines = _mb_static_raw | newline_to_br | split: '<br />' -%}
+                        {%- assign _mb_in_group = false -%}
                         {%- for _mb_ln in _mb_static_lines -%}
                            {%- assign _mb_ln_t = _mb_ln | strip -%}
                            {%- if _mb_ln_t == blank -%}{%- continue -%}{%- endif -%}
-                           {%- assign _mb_parts = _mb_ln_t | split: '|' -%}
-                           {%- if _mb_parts.size < 2 -%}{%- continue -%}{%- endif -%}
-                           {%- assign _mb_label = _mb_parts[0] | strip -%}
-                           {%- assign _mb_url = _mb_parts[1] | strip -%}
-                           <li class="t4s-menu-item t4s-item-level-1"><a href="{{ _mb_url }}">{{ _mb_label }}</a></li>
+                           {%- assign _mb_first = _mb_ln_t | slice: 0, 1 -%}
+                           {%- if _mb_first == '>' -%}
+                              {%- if _mb_in_group -%}</ul></li>{%- endif -%}
+                              {%- assign _mb_gh_raw = _mb_ln_t | remove_first: '>' | strip -%}
+                              {%- assign _mb_gh_parts = _mb_gh_raw | split: '|' -%}
+                              {%- assign _mb_gh_label = _mb_gh_parts[0] | strip -%}
+                              {%- assign _mb_gh_url = block_stts.url | default: '/' -%}
+                              {%- if _mb_gh_parts.size >= 2 -%}{%- assign _mb_gh_url = _mb_gh_parts[1] | strip -%}{%- endif -%}
+                              <li class="t4s-menu-item t4s-item-level-1 t4s-menu-item-has-children"><a href="{{ _mb_gh_url }}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">{{ _mb_gh_label }}</span><span class="t4s-mb-nav__icon"></span></a><ul class="t4s-sub-sub-menu">
+                              {%- assign _mb_in_group = true -%}
+                           {%- else -%}
+                              {%- assign _mb_parts = _mb_ln_t | split: '|' -%}
+                              {%- if _mb_parts.size < 2 -%}{%- continue -%}{%- endif -%}
+                              {%- assign _mb_label = _mb_parts[0] | strip -%}
+                              {%- assign _mb_url = _mb_parts[1] | strip -%}
+                              {%- if _mb_in_group -%}
+                                 <li class="t4s-menu-item t4s-item-level-2"><a href="{{ _mb_url }}">{{ _mb_label }}</a></li>
+                              {%- else -%}
+                                 <li class="t4s-menu-item t4s-item-level-1"><a href="{{ _mb_url }}">{{ _mb_label }}</a></li>
+                              {%- endif -%}
+                           {%- endif -%}
                         {%- endfor -%}
+                        {%- if _mb_in_group -%}</ul></li>{%- endif -%}
                      </ul>
                   </li>
                {%- elsif linklists[block_stts.menu].links.size > 0 -%}
