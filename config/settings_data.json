@@ -619,7 +619,7 @@
       "header-inline": {
         "type": "header-inline",
         "blocks": {
-          "69f5f6b3d48445cdb8": {
+          "51f3b9ca92814af8ac": {
             "type": "mega",
             "settings": {
               "title": "Shop Summer '26",
@@ -631,7 +631,7 @@
               "wid": "full nav_t4cnt"
             }
           },
-          "8bafc72054bc4a718e": {
+          "ce117a242539485d92": {
             "type": "mega",
             "settings": {
               "title": "Men",
@@ -643,7 +643,7 @@
               "wid": "full nav_t4cnt"
             }
           },
-          "4e62ff0c441c4055a2": {
+          "46216bf841254700ac": {
             "type": "mega",
             "settings": {
               "title": "Women",
@@ -655,7 +655,7 @@
               "wid": "full nav_t4cnt"
             }
           },
-          "2500b4b3eabe4a0eb3": {
+          "f7fa59e6099e485db9": {
             "type": "mega",
             "settings": {
               "title": "Kids",
@@ -667,7 +667,7 @@
               "wid": "full nav_t4cnt"
             }
           },
-          "13b90a02513245079a": {
+          "de60f1db6e8140f6a7": {
             "type": "mega",
             "settings": {
               "title": "Sale",
@@ -681,11 +681,11 @@
           }
         },
         "block_order": [
-          "69f5f6b3d48445cdb8",
-          "8bafc72054bc4a718e",
-          "4e62ff0c441c4055a2",
-          "2500b4b3eabe4a0eb3",
-          "13b90a02513245079a"
+          "51f3b9ca92814af8ac",
+          "ce117a242539485d92",
+          "46216bf841254700ac",
+          "f7fa59e6099e485db9",
+          "de60f1db6e8140f6a7"
         ],
         "settings": {
           "layout": "logo_left",
@@ -1053,199 +1053,199 @@
       "mega-menu": {
         "type": "mega-menu",
         "blocks": {
-          "7e19d7e9092847a09d": {
+          "b5c657531c8b4ae983": {
             "type": "mega",
             "settings": {
               "id": 1
             }
           },
-          "626fdbc483f44839aa": {
+          "55a4e35f26a04d5ba3": {
             "type": "link",
             "settings": {
-              "tt_hd": "Shop by category",
+              "tt_hd": "Categories",
               "url": "/collections/summer-26",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Summer tees|/collections/summer-tees\nShorts|/collections/shorts\nCo-ord sets|/collections/co-ords\nUnisex graphics|/collections/unisex-graphic-tees\nKids summer|/collections/kids-summer\nShop all summer|/collections/summer-26",
+              "static_links": "Summer Tees|/collections/summer-tees\nShorts|/collections/shorts\nCo-ord Sets|/collections/co-ords\nUnisex Graphics|/collections/unisex-graphic-tees\nKids Summer|/collections/kids-summer\nShop All Summer|/collections/summer-26",
               "col": "6"
             }
           },
-          "28b0f70a4ab144dd89": {
+          "55b7979c202a445284": {
             "type": "link",
             "settings": {
-              "tt_hd": "Shop by intent & featured",
+              "tt_hd": "Featured / Discovery",
               "url": "/collections/summer-26",
               "open_link": "_self",
               "menu": "",
-              "static_links": "New drop|/collections/summer-26?sort_by=created-descending\nBestsellers|/collections/summer-26?sort_by=best-selling\nUnder Rs.1500|/collections/summer-26/under-1500\nBundle & save|/collections/bundle-deals\nTNY Athletics|/collections/tny-athletics\n24/7 core|/collections/24-7",
+              "static_links": "New Drop|/collections/summer-26?sort_by=created-descending\nBestsellers|/collections/summer-26?sort_by=best-selling\nUnder Rs.1500|/collections/summer-26/under-1500\nBundle & Save|/collections/bundle-deals\nTNY Athletics|/collections/tny-athletics\n24/7 Core|/collections/24-7",
               "col": "6"
             }
           },
-          "7a7bcc24de094be988": {
+          "a14a4ae9295149cc98": {
             "type": "mega",
             "settings": {
               "id": 2
             }
           },
-          "469994731b74434084": {
+          "ccb3c706c4cb491081": {
             "type": "link",
             "settings": {
               "tt_hd": "Tops",
               "url": "/collections/men",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Summer tees|/collections/men/summer-tees\nGraphic tees|/collections/men/graphic-tees\nPolos & henleys|/collections/men/polos\nBasic tees|/collections/men/basic-tees",
+              "static_links": "Summer Tees|/collections/men/summer-tees\nGraphic Tees|/collections/men/graphic-tees\nPolos & Henleys|/collections/men/polos\nBasic Tees|/collections/men/basic-tees",
               "col": "4"
             }
           },
-          "2cc7fa996d584fcabc": {
+          "43110d5c2bff43abaa": {
             "type": "link",
             "settings": {
-              "tt_hd": "Bottoms & sets",
+              "tt_hd": "Bottoms & Sets",
               "url": "/collections/men",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Shorts|/collections/men/shorts\nTrousers|/collections/men/trousers\nCo-ord sets|/collections/men/co-ords\n24/7 loungewear|/collections/men/24-7",
+              "static_links": "Shorts|/collections/men/shorts\nTrousers|/collections/men/trousers\nCo-ords|/collections/men/co-ords\n24/7 Loungewear|/collections/men/24-7",
               "col": "4"
             }
           },
-          "2d9dc26acbdf4e6581": {
+          "8106e4b63a774e2383": {
             "type": "link",
             "settings": {
-              "tt_hd": "Shop the line",
+              "tt_hd": "Shop the Line",
               "url": "/collections/men",
               "open_link": "_self",
               "menu": "",
-              "static_links": "New arrivals|/collections/men/new\nTNY Athletics (men)|/collections/tny-athletics/men\nSale — men|/collections/men/sale\nShop all men|/collections/men",
+              "static_links": "New Arrivals|/collections/men/new\nTNY Athletics|/collections/tny-athletics/men\nSale|/collections/men/sale\nShop All Men|/collections/men",
               "col": "4"
             }
           },
-          "f4e128eda76c42fb8c": {
+          "b369190961884f9099": {
             "type": "mega",
             "settings": {
               "id": 3
             }
           },
-          "17aad2363ee64196a2": {
+          "cd2ca27358dd468889": {
             "type": "link",
             "settings": {
               "tt_hd": "Tops",
               "url": "/collections/womens",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Summer tees|/collections/womens/summer-tees\nTees & tops|/collections/womens/tops\nHenleys & waffle knits|/collections/womens/henleys\nGraphic tees|/collections/womens/graphic-tees",
+              "static_links": "Summer Tees|/collections/womens/summer-tees\nTees & Tops|/collections/womens/tops\nHenleys & Waffle Knits|/collections/womens/henleys\nGraphic Tees|/collections/womens/graphic-tees",
               "col": "4"
             }
           },
-          "2ccf908556ca4826bf": {
+          "e793dca30f2548fca2": {
             "type": "link",
             "settings": {
-              "tt_hd": "Bottoms & sets",
+              "tt_hd": "Bottoms & Sets",
               "url": "/collections/womens",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Shorts|/collections/womens/shorts\nTrousers|/collections/womens/trousers\nCo-ord sets|/collections/womens/co-ords\n24/7 loungewear|/collections/womens/24-7",
+              "static_links": "Shorts|/collections/womens/shorts\nTrousers|/collections/womens/trousers\nCo-ords|/collections/womens/co-ords\n24/7 Loungewear|/collections/womens/24-7",
               "col": "4"
             }
           },
-          "29aef319a6b842b594": {
+          "d5a6c481b4ae4a73a8": {
             "type": "link",
             "settings": {
-              "tt_hd": "Shop the line",
+              "tt_hd": "Shop the Line",
               "url": "/collections/womens",
               "open_link": "_self",
               "menu": "",
-              "static_links": "New arrivals|/collections/womens/new\nTNY Athletics (women)|/collections/tny-athletics/women\nSale — women|/collections/womens/sale\nShop all women|/collections/womens",
+              "static_links": "New Arrivals|/collections/womens/new\nTNY Athletics|/collections/tny-athletics/women\nSale|/collections/womens/sale\nShop All Women|/collections/womens",
               "col": "4"
             }
           },
-          "c348016464534b1fa8": {
+          "fe8550f1eedd4d819d": {
             "type": "mega",
             "settings": {
               "id": 4
             }
           },
-          "cddd6cbe810b4cb39a": {
+          "e50a6ec309c8430cbe": {
             "type": "link",
             "settings": {
-              "tt_hd": "Shop by type",
+              "tt_hd": "Shop By Type",
               "url": "/collections/kids",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Kids tees|/collections/kids/tees\nGraphic / character tees|/collections/kids/graphic\nShorts & trousers|/collections/kids/bottoms\nCo-ord sets|/collections/kids/co-ords",
+              "static_links": "Kids Tees|/collections/kids/tees\nCharacter / Graphic Tees|/collections/kids/graphic\nShorts & Bottoms|/collections/kids/bottoms\nCo-ord Sets|/collections/kids/co-ords",
               "col": "4"
             }
           },
-          "17ad18e305994622a3": {
+          "25b8d0105648425186": {
             "type": "link",
             "settings": {
-              "tt_hd": "Shop by age",
+              "tt_hd": "Shop By Age",
               "url": "/collections/kids",
               "open_link": "_self",
               "menu": "",
-              "static_links": "2–4 yrs|/collections/kids/age-2-4\n5–8 yrs|/collections/kids/age-5-8\n9–12 yrs|/collections/kids/age-9-12",
+              "static_links": "2–4 Years|/collections/kids/age-2-4\n5–8 Years|/collections/kids/age-5-8\n9–12 Years|/collections/kids/age-9-12",
               "col": "4"
             }
           },
-          "e1450dba09ee48e997": {
+          "9d5bc0b0e5e14615bc": {
             "type": "link",
             "settings": {
               "tt_hd": "Featured",
               "url": "/collections/kids",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Kids summer drop|/collections/kids-summer\nBundle deals|/collections/kids-bundle-deals\nShop all kids|/collections/kids",
+              "static_links": "Summer Drop|/collections/kids-summer\nBundle Deals|/collections/kids-bundle-deals\nShop All Kids|/collections/kids",
               "col": "4"
             }
           },
-          "614c4a83db77470c92": {
+          "6c0a157810ad44e5b7": {
             "type": "mega",
             "settings": {
               "id": 5
             }
           },
-          "36d8964327c74e17a8": {
+          "75ea91008ef94d4785": {
             "type": "link",
             "settings": {
-              "tt_hd": "By discount",
+              "tt_hd": "By Discount",
               "url": "/collections/sale",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Summer sale|/collections/summer-sale\nUnder Rs.1000|/collections/under-1000\nClearance|/collections/clearance\nBlackout sale|/collections/blackout-sale",
+              "static_links": "Summer Sale|/collections/summer-sale\nUnder Rs.1000|/collections/under-1000\nClearance|/collections/clearance\nBlackout Sale|/collections/blackout-sale",
               "col": "6"
             }
           },
-          "1b6bf53c54ef488e8e": {
+          "8615ac5396fd427584": {
             "type": "link",
             "settings": {
-              "tt_hd": "By who",
+              "tt_hd": "By Category",
               "url": "/collections/sale",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Men's sale|/collections/men/sale\nWomen's sale|/collections/womens/sale\nKids' sale|/collections/kids/sale\nShop all sale|/collections/sale",
+              "static_links": "Men's Sale|/collections/men/sale\nWomen's Sale|/collections/womens/sale\nKids Sale|/collections/kids/sale\nShop All Sale|/collections/sale",
               "col": "6"
             }
           }
         },
         "block_order": [
-          "7e19d7e9092847a09d",
-          "626fdbc483f44839aa",
-          "28b0f70a4ab144dd89",
-          "7a7bcc24de094be988",
-          "469994731b74434084",
-          "2cc7fa996d584fcabc",
-          "2d9dc26acbdf4e6581",
-          "f4e128eda76c42fb8c",
-          "17aad2363ee64196a2",
-          "2ccf908556ca4826bf",
-          "29aef319a6b842b594",
-          "c348016464534b1fa8",
-          "cddd6cbe810b4cb39a",
-          "17ad18e305994622a3",
-          "e1450dba09ee48e997",
-          "614c4a83db77470c92",
-          "36d8964327c74e17a8",
-          "1b6bf53c54ef488e8e"
+          "b5c657531c8b4ae983",
+          "55a4e35f26a04d5ba3",
+          "55b7979c202a445284",
+          "a14a4ae9295149cc98",
+          "ccb3c706c4cb491081",
+          "43110d5c2bff43abaa",
+          "8106e4b63a774e2383",
+          "b369190961884f9099",
+          "cd2ca27358dd468889",
+          "e793dca30f2548fca2",
+          "d5a6c481b4ae4a73a8",
+          "fe8550f1eedd4d819d",
+          "e50a6ec309c8430cbe",
+          "25b8d0105648425186",
+          "9d5bc0b0e5e14615bc",
+          "6c0a157810ad44e5b7",
+          "75ea91008ef94d4785",
+          "8615ac5396fd427584"
         ],
         "settings": {
           "bg": ""
@@ -1254,76 +1254,76 @@
       "mb_nav": {
         "type": "mb_nav",
         "blocks": {
-          "debdbba2bfde4d5b81": {
+          "5aaf3dce4f414c53a2": {
             "type": "sea",
             "settings": {}
           },
-          "f07e1afd6faf42f495": {
+          "f2a698d5d11744fa95": {
             "type": "menu",
             "settings": {
               "title": "SHOP SUMMER '26",
               "url": "/collections/summer-26",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Shop by category|/collections/summer-26\nSummer tees|/collections/summer-tees\nShorts|/collections/shorts\nCo-ord sets|/collections/co-ords\nUnisex graphics|/collections/unisex-graphic-tees\nKids summer|/collections/kids-summer\nShop all summer|/collections/summer-26\nShop by intent & featured|/collections/summer-26\nNew drop|/collections/summer-26?sort_by=created-descending\nBestsellers|/collections/summer-26?sort_by=best-selling\nUnder Rs.1500|/collections/summer-26/under-1500\nBundle & save|/collections/bundle-deals\nTNY Athletics|/collections/tny-athletics\n24/7 core|/collections/24-7",
+              "static_links": "Categories|/collections/summer-26\nSummer Tees|/collections/summer-tees\nShorts|/collections/shorts\nCo-ord Sets|/collections/co-ords\nUnisex Graphics|/collections/unisex-graphic-tees\nKids Summer|/collections/kids-summer\nShop All Summer|/collections/summer-26\nFeatured / Discovery|/collections/summer-26\nNew Drop|/collections/summer-26?sort_by=created-descending\nBestsellers|/collections/summer-26?sort_by=best-selling\nUnder Rs.1500|/collections/summer-26/under-1500\nBundle & Save|/collections/bundle-deals\nTNY Athletics|/collections/tny-athletics\n24/7 Core|/collections/24-7",
               "lb": "",
               "icon": "",
               "icons_op": "0"
             }
           },
-          "396f24c22df846868a": {
+          "1bd7c072aaa148a6a4": {
             "type": "menu",
             "settings": {
               "title": "MEN",
               "url": "/collections/men",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Tops|/collections/men\nSummer tees|/collections/men/summer-tees\nGraphic tees|/collections/men/graphic-tees\nPolos & henleys|/collections/men/polos\nBasic tees|/collections/men/basic-tees\nBottoms & sets|/collections/men\nShorts|/collections/men/shorts\nTrousers|/collections/men/trousers\nCo-ord sets|/collections/men/co-ords\n24/7 loungewear|/collections/men/24-7\nShop the line|/collections/men\nNew arrivals|/collections/men/new\nTNY Athletics (men)|/collections/tny-athletics/men\nSale — men|/collections/men/sale\nShop all men|/collections/men",
+              "static_links": "Tops|/collections/men\nSummer Tees|/collections/men/summer-tees\nGraphic Tees|/collections/men/graphic-tees\nPolos & Henleys|/collections/men/polos\nBasic Tees|/collections/men/basic-tees\nBottoms & Sets|/collections/men\nShorts|/collections/men/shorts\nTrousers|/collections/men/trousers\nCo-ords|/collections/men/co-ords\n24/7 Loungewear|/collections/men/24-7\nShop the Line|/collections/men\nNew Arrivals|/collections/men/new\nTNY Athletics|/collections/tny-athletics/men\nSale|/collections/men/sale\nShop All Men|/collections/men",
               "lb": "",
               "icon": "",
               "icons_op": "0"
             }
           },
-          "9bf8575709dd4243a4": {
+          "5d676415e2414f2799": {
             "type": "menu",
             "settings": {
               "title": "WOMEN",
               "url": "/collections/womens",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Tops|/collections/womens\nSummer tees|/collections/womens/summer-tees\nTees & tops|/collections/womens/tops\nHenleys & waffle knits|/collections/womens/henleys\nGraphic tees|/collections/womens/graphic-tees\nBottoms & sets|/collections/womens\nShorts|/collections/womens/shorts\nTrousers|/collections/womens/trousers\nCo-ord sets|/collections/womens/co-ords\n24/7 loungewear|/collections/womens/24-7\nShop the line|/collections/womens\nNew arrivals|/collections/womens/new\nTNY Athletics (women)|/collections/tny-athletics/women\nSale — women|/collections/womens/sale\nShop all women|/collections/womens",
+              "static_links": "Tops|/collections/womens\nSummer Tees|/collections/womens/summer-tees\nTees & Tops|/collections/womens/tops\nHenleys & Waffle Knits|/collections/womens/henleys\nGraphic Tees|/collections/womens/graphic-tees\nBottoms & Sets|/collections/womens\nShorts|/collections/womens/shorts\nTrousers|/collections/womens/trousers\nCo-ords|/collections/womens/co-ords\n24/7 Loungewear|/collections/womens/24-7\nShop the Line|/collections/womens\nNew Arrivals|/collections/womens/new\nTNY Athletics|/collections/tny-athletics/women\nSale|/collections/womens/sale\nShop All Women|/collections/womens",
               "lb": "",
               "icon": "",
               "icons_op": "0"
             }
           },
-          "9f7af7dead5641478f": {
+          "0c3978ace7c2439596": {
             "type": "menu",
             "settings": {
               "title": "KIDS",
               "url": "/collections/kids",
               "open_link": "_self",
               "menu": "",
-              "static_links": "Shop by type|/collections/kids\nKids tees|/collections/kids/tees\nGraphic / character tees|/collections/kids/graphic\nShorts & trousers|/collections/kids/bottoms\nCo-ord sets|/collections/kids/co-ords\nShop by age|/collections/kids\n2–4 yrs|/collections/kids/age-2-4\n5–8 yrs|/collections/kids/age-5-8\n9–12 yrs|/collections/kids/age-9-12\nFeatured|/collections/kids\nKids summer drop|/collections/kids-summer\nBundle deals|/collections/kids-bundle-deals\nShop all kids|/collections/kids",
+              "static_links": "Shop By Type|/collections/kids\nKids Tees|/collections/kids/tees\nCharacter / Graphic Tees|/collections/kids/graphic\nShorts & Bottoms|/collections/kids/bottoms\nCo-ord Sets|/collections/kids/co-ords\nShop By Age|/collections/kids\n2–4 Years|/collections/kids/age-2-4\n5–8 Years|/collections/kids/age-5-8\n9–12 Years|/collections/kids/age-9-12\nFeatured|/collections/kids\nSummer Drop|/collections/kids-summer\nBundle Deals|/collections/kids-bundle-deals\nShop All Kids|/collections/kids",
               "lb": "",
               "icon": "",
               "icons_op": "0"
             }
           },
-          "d3fa822e24cb4fb0b9": {
+          "88f220a48a5b47dca9": {
             "type": "menu",
             "settings": {
               "title": "SALE",
               "url": "/collections/sale",
               "open_link": "_self",
               "menu": "",
-              "static_links": "By discount|/collections/sale\nSummer sale|/collections/summer-sale\nUnder Rs.1000|/collections/under-1000\nClearance|/collections/clearance\nBlackout sale|/collections/blackout-sale\nBy who|/collections/sale\nMen's sale|/collections/men/sale\nWomen's sale|/collections/womens/sale\nKids' sale|/collections/kids/sale\nShop all sale|/collections/sale",
+              "static_links": "By Discount|/collections/sale\nSummer Sale|/collections/summer-sale\nUnder Rs.1000|/collections/under-1000\nClearance|/collections/clearance\nBlackout Sale|/collections/blackout-sale\nBy Category|/collections/sale\nMen's Sale|/collections/men/sale\nWomen's Sale|/collections/womens/sale\nKids Sale|/collections/kids/sale\nShop All Sale|/collections/sale",
               "lb": "",
               "icon": "",
               "icons_op": "0"
             }
           },
-          "8ee9b800b8a64e9e8b": {
+          "18a6f5bce0fa4182bc": {
             "type": "help",
             "settings": {
               "title": "Need help?"
@@ -1331,13 +1331,13 @@
           }
         },
         "block_order": [
-          "debdbba2bfde4d5b81",
-          "f07e1afd6faf42f495",
-          "396f24c22df846868a",
-          "9bf8575709dd4243a4",
-          "9f7af7dead5641478f",
-          "d3fa822e24cb4fb0b9",
-          "8ee9b800b8a64e9e8b"
+          "5aaf3dce4f414c53a2",
+          "f2a698d5d11744fa95",
+          "1bd7c072aaa148a6a4",
+          "5d676415e2414f2799",
+          "0c3978ace7c2439596",
+          "88f220a48a5b47dca9",
+          "18a6f5bce0fa4182bc"
         ],
         "settings": {}
       },
