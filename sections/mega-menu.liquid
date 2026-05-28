@@ -227,20 +227,40 @@
           </div>
           {%- endpaginate -%}
         {%- when 'link' -%}
-           {%- liquid 
+           {%- liquid
               assign llists = linklists[bk_stts.menu].links
+              assign static_raw = bk_stts.static_links | default: ''
+              assign has_static = false
+              if static_raw != blank
+                assign has_static = true
+              endif
               if bk_stts.url != blank
                 assign ARRhtml = 'a,,' | split: ','
               else
                 assign ARRhtml = 'div,data-,data-' | split: ','
               endif
            -%}
-           {%- if llists.size == 0 -%}{% continue %}{%- endif -%}
+           {%- if has_static == false and llists.size == 0 -%}{% continue %}{%- endif -%}
            <div id="bk_{{ block.id }}" class="type_mn_link t4s-menu-item t4s-sub-column-item t4s-col-{{ bk_stts.col }} t4s-col-item" {{ block.shopify_attributes }}>
             {%- if bk_stts.tt_hd != blank %}<{{ ARRhtml[0] }} {{ ARRhtml[1] }}href="{{ bk_stts.url }}"  {{ ARRhtml[2] }}target="{{ bk_stts.open_link }}" class="t4s-heading">{%- render 'title_menu2', title: bk_stts.tt_hd -%}</{{ ARRhtml[0] }}>{% endif -%}
-            <ul class="t4s-sub-column{% if bk_stts.tt_hd != blank %} not_tt_mn{% endif %}">{%- for link in llists -%}
-            <li class="t4s-menu-item{% if link.active %} is--current{% endif %}"><a href="{{ link.url }}">{%- render 'title_menu2', title: link.title -%}</a></li>
-            {%- endfor -%}</ul>
+            <ul class="t4s-sub-column{% if bk_stts.tt_hd != blank %} not_tt_mn{% endif %}">
+            {%- if has_static -%}
+              {%- assign static_lines = static_raw | newline_to_br | split: '<br />' -%}
+              {%- for ln in static_lines -%}
+                {%- assign ln_t = ln | strip -%}
+                {%- if ln_t == blank -%}{%- continue -%}{%- endif -%}
+                {%- assign parts = ln_t | split: '|' -%}
+                {%- if parts.size < 2 -%}{%- continue -%}{%- endif -%}
+                {%- assign st_label = parts[0] | strip -%}
+                {%- assign st_url = parts[1] | strip -%}
+                <li class="t4s-menu-item"><a href="{{ st_url }}">{%- render 'title_menu2', title: st_label -%}</a></li>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for link in llists -%}
+                <li class="t4s-menu-item{% if link.active %} is--current{% endif %}"><a href="{{ link.url }}">{%- render 'title_menu2', title: link.title -%}</a></li>
+              {%- endfor -%}
+            {%- endif -%}
+            </ul>
            </div>
         {%- when 'link2' -%}{%- assign llists = linklists[bk_stts.menu].links -%}
            {%- if llists.size == 0 -%}{% continue %}{%- endif -%}
@@ -447,6 +467,12 @@
             "type": "link_list",
             "id": "menu",
             "label": "Add menu"
+          },
+          {
+            "type": "textarea",
+            "id": "static_links",
+            "label": "Static links (overrides 'Add menu')",
+            "info": "One per line, format: Label|URL"
           },
            {
             "type": "select",

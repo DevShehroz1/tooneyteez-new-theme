@@ -191,8 +191,33 @@ endif -%}
                  {%- endif -%}
             
             {%- when 'menu' -%}
-
-               {%- if linklists[block_stts.menu].links.size > 0 -%}
+               {%- assign _mb_static_raw = block_stts.static_links | default: '' -%}
+               {%- if _mb_static_raw != blank -%}
+                  <li id="item_{{ block.id }}" class="t4s-menu-item t4s-item-level-0 t4s-menu-item-has-children {{ only_icon }}" {{ block.shopify_attributes }}>
+                     <a href="{{ block_stts.url }}" target="{{ block_stts.open_link }}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">
+                        {%- if block_stts.icons_op == '2' and block_stts.icon != blank %}<i class="{{ block_stts.icon | strip }}"></i>
+                           {%- elsif block_stts.icons_op == '1' and block_stts.image != blank %}
+                               {%- assign image = block_stts.image -%}
+                              <i class="t4s-d-inline-block t4s-pr">
+                                 <img class="t4s-img_catk_mb lazyloadt4s" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" data-src="{{ image | image_url: width: img_size }}" alt="{{ image.alt | escape }}">
+                                 <span class="lazyloadt4s-loader is-bg-img" style="background: url({{ image | image_url: width: 1 }});"></span>
+                               </i>
+                        {% endif -%}
+                        {{ block_stts.title }}{% if block_stts.lb != blank %}<span class="t4s-lb_nav_mb" style="background-color: {{ block_stts.lb_cl | default: '#01bad4' }}">{{ block_stts.lb }}</span>{% endif %}</span><span class="t4s-mb-nav__icon"></span></a>
+                     <ul class="t4s-sub-menu">
+                        {%- assign _mb_static_lines = _mb_static_raw | newline_to_br | split: '<br />' -%}
+                        {%- for _mb_ln in _mb_static_lines -%}
+                           {%- assign _mb_ln_t = _mb_ln | strip -%}
+                           {%- if _mb_ln_t == blank -%}{%- continue -%}{%- endif -%}
+                           {%- assign _mb_parts = _mb_ln_t | split: '|' -%}
+                           {%- if _mb_parts.size < 2 -%}{%- continue -%}{%- endif -%}
+                           {%- assign _mb_label = _mb_parts[0] | strip -%}
+                           {%- assign _mb_url = _mb_parts[1] | strip -%}
+                           <li class="t4s-menu-item t4s-item-level-1"><a href="{{ _mb_url }}">{{ _mb_label }}</a></li>
+                        {%- endfor -%}
+                     </ul>
+                  </li>
+               {%- elsif linklists[block_stts.menu].links.size > 0 -%}
                    <li id="item_{{ block.id }}" class="t4s-menu-item t4s-item-level-0 t4s-menu-item-has-children {{ only_icon }}" {{ block.shopify_attributes }}>
                      <a href="{{ block_stts.url }}" target="{{ block_stts.open_link }}"><span class="t4s-nav_link_txt t4s-d-flex t4s-align-items-center">
                         {%- if block_stts.icons_op == '2' and block_stts.icon != blank %}<i class="{{ block_stts.icon | strip }}"></i>
@@ -442,6 +467,12 @@ endif -%}
                 "type": "link_list",
                 "id": "menu",
                 "label": "Add menu"
+            },
+            {
+                "type": "textarea",
+                "id": "static_links",
+                "label": "Static links (overrides 'Add menu')",
+                "info": "One per line, format: Label|URL"
             },
             {
                 "type":"text",
