@@ -309,6 +309,23 @@
 <link rel="stylesheet" href="{{ 'mobile_nav.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- if admin_sp -%}
    <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left t4s-dn{% if is_page_index %} t4s-page-index-{{ page.id }}{% endif %}" aria-hidden="true">
+     <div class="t4s-mb-drawer-topbar">
+       <button class="t4s-mb-drawer-topbar__close" data-drawer-close type="button" aria-label="{{ 'general.mobile_menu.close' | t }}">
+         <svg width="16" height="14" viewBox="0 0 16 14" role="presentation"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg>
+       </button>
+       <a class="t4s-mb-drawer-topbar__logo" href="{{ routes.root_url }}">
+         {%- if settings.logo != blank -%}
+           {%- assign logo_h = settings.logo_width | default: 110 | times: 0.4 | round -%}
+           <img src="{{ settings.logo | image_url: width: 220 }}" alt="{{ shop.name | escape }}" width="{{ settings.logo_width | default: 110 }}" height="{{ logo_h }}" loading="eager">
+         {%- else -%}
+           <span>{{ shop.name }}</span>
+         {%- endif -%}
+       </a>
+       <a class="t4s-mb-drawer-topbar__cart" href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="{{ 'general.cart.title' | t | default: 'Cart' }}">
+         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+         <span class="t4s-mb-drawer-topbar__cart-count" data-cart-count>{{ cart.item_count }}</span>
+       </a>
+     </div>
      {%- if mobile_nav_type == '1' or mobile_nav_type == '2' -%}
      <div class="t4s-drawer__header"><span>{% if mobile_nav_type == '1' %}{%- assign navActive = 'is--active' -%}{{ 'general.mobile_menu.menu' | t }}{% else %}{%- assign catActive = 'is--active' -%}{{ 'general.mobile_menu.categories' | t }}{% endif %}</span></div>
      {%- else -%}
@@ -336,6 +353,23 @@
    
 {%- else -%}
   <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left{% if settings.header_design != 'sidebar' %} t4s-d-lg-none{% endif %}" aria-hidden="true">
+    <div class="t4s-mb-drawer-topbar">
+      <button class="t4s-mb-drawer-topbar__close" data-drawer-close type="button" aria-label="{{ 'general.mobile_menu.close' | t }}">
+        <svg width="16" height="14" viewBox="0 0 16 14" role="presentation"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg>
+      </button>
+      <a class="t4s-mb-drawer-topbar__logo" href="{{ routes.root_url }}">
+        {%- if settings.logo != blank -%}
+          {%- assign logo_h = settings.logo_width | default: 110 | times: 0.4 | round -%}
+          <img src="{{ settings.logo | image_url: width: 220 }}" alt="{{ shop.name | escape }}" width="{{ settings.logo_width | default: 110 }}" height="{{ logo_h }}" loading="eager">
+        {%- else -%}
+          <span>{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+      <a class="t4s-mb-drawer-topbar__cart" href="{{ routes.cart_url }}"{% if request.page_type != 'cart' and settings.cart_type != 'disable' %} data-drawer-delay- data-drawer-options='{ "id":"#t4s-mini_cart" }'{% endif %} aria-label="Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="t4s-mb-drawer-topbar__cart-count" data-cart-count>{{ cart.item_count }}</span>
+      </a>
+    </div>
     <div class="t4s-skeleton-element ske-h-50 ske-mb-20 ske-shine"></div>
     <div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div>
     <div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div>
