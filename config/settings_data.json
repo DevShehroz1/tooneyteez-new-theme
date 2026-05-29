@@ -1335,6 +1335,51 @@
               "col3_title": "About",
               "col3_links": "Our story|/pages/our-story\nPrivacy policy|/pages/privacy-policy\nTerms|/pages/terms-of-service"
             }
+          },
+          "1be9e7a4d3244c22ab": {
+            "type": "menu",
+            "settings": {
+              "title": "Winter Archive",
+              "url": "/collections/winter",
+              "open_link": "_self",
+              "menu": "",
+              "static_links": "",
+              "lb": "",
+              "icon": "",
+              "icons_op": "0",
+              "default_open": false,
+              "highlight": false
+            }
+          },
+          "bea47edcb39444b8b7": {
+            "type": "menu",
+            "settings": {
+              "title": "Blackout",
+              "url": "/collections/blackout-sale",
+              "open_link": "_self",
+              "menu": "",
+              "static_links": "",
+              "lb": "",
+              "icon": "",
+              "icons_op": "0",
+              "default_open": false,
+              "highlight": false
+            }
+          },
+          "be64c7d102ee400b98": {
+            "type": "menu",
+            "settings": {
+              "title": "All Collections",
+              "url": "/collections",
+              "open_link": "_self",
+              "menu": "",
+              "static_links": "",
+              "lb": "",
+              "icon": "",
+              "icons_op": "0",
+              "default_open": false,
+              "highlight": false
+            }
           }
         },
         "block_order": [
@@ -1344,6 +1389,9 @@
           "76514f5a75cb4a33b7",
           "83a2ea0420264c1cb6",
           "47af481d468f4a5e8d",
+          "1be9e7a4d3244c22ab",
+          "bea47edcb39444b8b7",
+          "be64c7d102ee400b98",
           "ef44c957921d4cf183"
         ],
         "settings": {}
