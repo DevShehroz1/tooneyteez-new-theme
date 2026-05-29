@@ -7,6 +7,11 @@
     display: block;
 }
 
+/* Hide Kalles' default floating close — our topbar has its own × */
+#t4s-menu-drawer + .t4s-drawer-menu__close {
+    display: none !important;
+}
+
 /* Drawer top bar: close + logo + cart */
 .t4s-mb-drawer-topbar {
     display: -webkit-box;
