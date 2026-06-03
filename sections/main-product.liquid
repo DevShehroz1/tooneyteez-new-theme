@@ -818,7 +818,7 @@ endif -%}
                         {%- assign swatch_product = swatch.product.value -%}
                         {%- if swatch_product == blank -%}{%- continue -%}{% endif -%}
                         {%- assign swatch_image_obj = swatch.swatch_image.value -%}
-                        {%- assign display_name = swatch_product.title | split: ' ' | last -%}
+                        {%- assign display_name = swatch.display_name.value | default: swatch.swatch_color_name.value | default: swatch_product.title -%}
                         {%- assign current_swatch = false -%}
                         {%- if swatch_product.id == product.id -%}
                           {%- assign current_swatch = true -%}
