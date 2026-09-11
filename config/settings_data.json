@@ -1292,8 +1292,8 @@
               "title": "WOMEN",
               "url": "/collections/womens",
               "open_link": "_self",
-              "menu": "",
-              "static_links": "New Arrivals|/collections/womens/new\n>Tops|/collections/womens\nSummer Tees|/collections/womens/summer-tees\nTees & Tops|/collections/womens/tops\nHenleys & Waffle Knits|/collections/womens/henleys\nGraphic Tees|/collections/womens/graphic-tees\n>Bottoms & Sets|/collections/womens\nShorts|/collections/womens/shorts\nTrousers|/collections/womens/trousers\nCo-ords|/collections/womens/co-ords\n24/7 Loungewear|/collections/womens/24-7\n>More|/collections/womens\nTNY Athletics|/collections/tny-athletics/women\nSale|/collections/womens/sale\nShop All Women|/collections/womens",
+              "menu": "women-1",
+              "static_links": "",
               "lb": "",
               "icon": "",
               "icons_op": "0"
@@ -1306,7 +1306,7 @@
               "url": "/collections/kids",
               "open_link": "_self",
               "menu": "",
-              "static_links": ">Shop By Type|/collections/kids\nKids Tees|/collections/kids/tees\nCharacter / Graphic Tees|/collections/kids/graphic\nShorts & Bottoms|/collections/kids/bottoms\nCo-ord Sets|/collections/kids/co-ords\n>Shop By Age|/collections/kids\n2–4 Years|/collections/kids/age-2-4\n5–8 Years|/collections/kids/age-5-8\n9–12 Years|/collections/kids/age-9-12\n>Featured|/collections/kids\nSummer Drop|/collections/kids-summer\nBundle Deals|/collections/kids-bundle-deals\nShop All Kids|/collections/kids",
+              "static_links": "",
               "lb": "",
               "icon": "",
               "icons_op": "0"
