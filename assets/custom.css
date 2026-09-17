@@ -107,5 +107,17 @@
 
 /*---------------- Custom CSS for only mobile -------------------*/
 @media (max-width: 767px){
-  
+
+}
+
+/* Image swatches — equal size */
+.t4s-image-swatch__image-wrapper {
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+.t4s-image-swatch__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
