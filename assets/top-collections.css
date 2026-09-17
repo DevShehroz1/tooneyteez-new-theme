@@ -74,4 +74,24 @@
 	.t4s-hidden-mobile-true {
 		display: none;
 	}
+  .t4s-top-collections .t4s-top-list-collections {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .t4s-top-collections .t4s-top-list-collections .flickityt4s-button {
+    display: inline-flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    width: 24px;
+    height: 100%;
+    top: 0;
+    transform: none;
+    align-items: center;
+  }
+  .t4s-top-collections .t4s-top-list-collections .flickityt4s-prev-next-button.previous {
+    left: 0;
+  }
+  .t4s-top-collections .t4s-top-list-collections .flickityt4s-prev-next-button.next {
+    right: 0;
+  }
 }
