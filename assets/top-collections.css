@@ -74,29 +74,30 @@
 	.t4s-hidden-mobile-true {
 		display: none;
 	}
-  .tc-mb-wrap {
+  .tc-mb-arrow {
     display: flex;
     align-items: center;
-  }
-  .tc-mb-arrow {
+    justify-content: center;
     flex-shrink: 0;
     width: 28px;
-    min-width: 28px;
-    height: 100%;
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 22px;
+    color: var(--text-cl, #222);
     line-height: 1;
-    color: #222;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 2;
   }
-  .tc-mb-wrap .t4s-top-list-collections {
-    flex: 1;
-    min-width: 0;
+  .t4s-top-list-collections {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap !important;
+  }
+  .t4s-top-list-collections::-webkit-scrollbar {
+    display: none;
   }
 }
 @media(min-width: 768px) {
