@@ -74,24 +74,34 @@
 	.t4s-hidden-mobile-true {
 		display: none;
 	}
-  .t4s-top-collections .t4s-top-list-collections {
-    padding-left: 28px;
-    padding-right: 28px;
-  }
-  .t4s-top-collections .t4s-top-list-collections .flickityt4s-button {
-    display: inline-flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    width: 24px;
-    height: 100%;
-    top: 0;
-    transform: none;
+  .tc-mb-arrow {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--text-cl, #222);
+    line-height: 1;
+    z-index: 2;
   }
-  .t4s-top-collections .t4s-top-list-collections .flickityt4s-prev-next-button.previous {
-    left: 0;
+  .t4s-top-list-collections {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap !important;
   }
-  .t4s-top-collections .t4s-top-list-collections .flickityt4s-prev-next-button.next {
-    right: 0;
+  .t4s-top-list-collections::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media(min-width: 768px) {
+  .tc-mb-arrow {
+    display: none;
   }
 }
