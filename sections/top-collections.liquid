@@ -87,14 +87,6 @@
         {{- html_layout[0] -}}
         {%- if stt_layout == 't4s-se-container' -%}<div class="t4s-container-inner {% if stt_image_bg != blank %} t4s-has-imgbg lazyloadt4s {% endif %} "  {% if stt_image_bg != blank %}  data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto"  data-optimumx="2" {% endif %} > {%- endif -%}
             <div class="t4s-top-collections t4s-text-{{ se_stts.content_align }} t4s-border-{{ se_stts.box_border }} t4s-hidden-mobile-{{ se_stts.hidden_mobile }}">
-                <style>
-                  @media(max-width:767px){
-                    .tc-mb-wrap{display:flex!important;align-items:center!important;}
-                    .tc-mb-arrow{display:flex!important;align-items:center;justify-content:center;flex-shrink:0;width:28px;min-width:28px;background:none;border:none;padding:0;cursor:pointer;font-size:26px;color:#222;line-height:1;}
-                    .tc-mb-wrap>.t4s-top-list-collections{flex:1!important;min-width:0!important;}
-                  }
-                  @media(min-width:768px){.tc-mb-arrow{display:none!important;}}
-                </style>
                 <div class="tc-mb-wrap">
                   <button class="tc-mb-arrow tc-mb-arrow-prev" aria-label="Previous">&#8249;</button>
                   <div id="tc-strip-{{ sid }}" data-lh="{{ bk_stts.text_lh }}" data-lh-md="{{ bk_stts.text_lh }}" data-lh-lg="{{ bk_stts.text_lh }}" class="t4s-top-list-collections t4s-row t4s-g-0 t4s-align-items-center t4s-justify-content-{{ se_stts.content_align }} t4s-fnt-fm-{{ se_stts.fontf }} t4s-font-italic-{{ se_stts.font_italic }} t4s-flicky-slider t4s-slider-btn-style-simple t4s-slider-btn-none t4s-slider-btn-small t4s-slider-btn-vi-always flickityt4s" data-flickityt4s-js='{"isSimple": true,"freeScroll": true, "setPrevNextButtons":{{ se_stts.nav_btn }}, "arrowIcon":"1", "imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5,"minWidthLG": 1025,"cellAlignLG":"{{ slide_cellAlign }}","cellAlign":"center","wrapAround": false,"prevNextButtons": {{ se_stts.nav_btn }},"percentPosition": 0,"pageDots": false, "pauseAutoPlayOnHover" : true }' style="--text-cl:{{ se_stts.text_cl }};--text-cl-hover:{{ se_stts.text_cl_hover }};--text-fs:{{ se_stts.text_fs }}px;--text-fw:{{ se_stts.text_fw }};--text-lh:{{ se_stts.text_lh }}px;--text-ls:{{ se_stts.text_ls }}px;--space-item:{{ se_stts.space_item }}px;">{{ html_els }}</div>
