@@ -332,23 +332,17 @@
               {%- if blog != blank -%} 
                 {%- case post_des -%} 
                   {%-  when '1' -%}
-                    {%- render 'post_loop_1' for blog.articles as post,
-                       , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+                    {%- render 'post_loop_1' for blog.articles as post, blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
                   {%-  when '2' -%}
-                    {%- render 'post_loop_2' for blog.articles as post,
-                       , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+                    {%- render 'post_loop_2' for blog.articles as post, blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
                   {%-  when '3' -%}
-                    {%- render 'post_loop_3' for blog.articles as post,
-                       , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+                    {%- render 'post_loop_3' for blog.articles as post, blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
                   {%-  when '4' -%}
-                    {%- render 'post_loop_4' for blog.articles as post,
-                       , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+                    {%- render 'post_loop_4' for blog.articles as post, blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
                   {%-  when '5' -%}
-                    {%- render 'post_loop_5' for blog.articles as post,
-                       , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+                    {%- render 'post_loop_5' for blog.articles as post, blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
                   {%-  when '6' -%}
-                    {%- render 'post_loop_6' for blog.articles as post,
-                       , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+                    {%- render 'post_loop_6' for blog.articles as post, blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
                 {%- endcase -%}
               {%- else -%}
                 {%- for i in (1..8) limit: limit -%}
@@ -2670,4 +2664,64 @@
       }
    ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%- render 'post_loop_1' for blog.articles as post,
+                           , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+  to: "{%- render 'post_loop_1' for blog.articles as post, blog: blog, blog_url: blog_url,
+    by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt:
+    show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags:
+    show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date,
+    readmore_txt: readmore_txt -%}"
+  position: 25431..25789
+- from: |-
+    {%- render 'post_loop_2' for blog.articles as post,
+                           , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+  to: "{%- render 'post_loop_2' for blog.articles as post, blog: blog, blog_url: blog_url,
+    by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt:
+    show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags:
+    show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date,
+    readmore_txt: readmore_txt -%}"
+  position: 25846..26204
+- from: |-
+    {%- render 'post_loop_3' for blog.articles as post,
+                           , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+  to: "{%- render 'post_loop_3' for blog.articles as post, blog: blog, blog_url: blog_url,
+    by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt:
+    show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags:
+    show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date,
+    readmore_txt: readmore_txt -%}"
+  position: 26261..26619
+- from: |-
+    {%- render 'post_loop_4' for blog.articles as post,
+                           , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+  to: "{%- render 'post_loop_4' for blog.articles as post, blog: blog, blog_url: blog_url,
+    by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt:
+    show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags:
+    show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date,
+    readmore_txt: readmore_txt -%}"
+  position: 26676..27034
+- from: |-
+    {%- render 'post_loop_5' for blog.articles as post,
+                           , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+  to: "{%- render 'post_loop_5' for blog.articles as post, blog: blog, blog_url: blog_url,
+    by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt:
+    show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags:
+    show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date,
+    readmore_txt: readmore_txt -%}"
+  position: 27091..27449
+- from: |-
+    {%- render 'post_loop_6' for blog.articles as post,
+                           , blog: blog, blog_url: blog_url, by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt: show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags: show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date, readmore_txt: readmore_txt -%}
+  to: "{%- render 'post_loop_6' for blog.articles as post, blog: blog, blog_url: blog_url,
+    by_txt: by_txt, on_txt: on_txt, b_effect: b_effect, img_effect: img_effect, show_dt:
+    show_dt, show_au: show_au, show_cm: show_cm, show_cate: show_cate, show_tags:
+    show_tags, show_cnt: show_cnt, show_rm: show_rm, show_irm: show_irm, date: date,
+    readmore_txt: readmore_txt -%}"
+  position: 27506..27864
+{%- endcomment -%}
